@@ -1,20 +1,20 @@
 version: '3.5'
 services:
-  app:
-    build: 
-      context: .
-    volumes:
-      - .:/spe_main_project_frontend
+  # app:
+  #   build: 
+  #     context: .
+  #   volumes:
+  #     - .:/spe_main_project_frontend
     
   frontend:
-    image: virtuallab-frontend
+    image: naidu2658/virtual_lab_frontend
     ports:
       - 3000:3000
     container_name: frontend_container1
     command: npm start
 
   backend:
-    image: virtuallab-backend-spring
+    image: naidu2658/virtual_lab_backend
     ports:
       - "9090:9090"
     container_name: backend_container_sql1
@@ -31,6 +31,6 @@ services:
     container_name: database_container
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=test
+      - MYSQL_DATABASE=virtuallab
       - MYSQL_USER=naidu
       - MYSQL_PASSWORD=password
