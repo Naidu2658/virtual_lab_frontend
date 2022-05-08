@@ -64,11 +64,11 @@ class ViewCoursesPage extends Component{
               <div>
                 {console.log(this.props.match.params.student_mail)}
                  <div>
-                    {/* {this.state.resp.courses.map((item) => (
+                    {this.state.resp.courses.map((item) => (
                     
                      <Link to="/view-tasks-under-courses"><Button>{item}</Button></Link>
                    
-                   ))} */}
+                   ))}
                 </div>
                
               </div>
