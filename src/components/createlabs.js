@@ -42,9 +42,9 @@ class CreateLabsPage  extends Component{
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
     };
    
+
         
-        
-        axios.post('http://localhost:9090/createlab', formData, { headers })
+        axios.post('http://172.16.134.190:9090/createlab', formData, { headers })
          .then(response => 
            {
 
