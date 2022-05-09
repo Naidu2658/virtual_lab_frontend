@@ -33,7 +33,7 @@ services:
     container_name: backend
     restart: on-failure
     environment:
-      - MYSQL_HOST=mydb
+      - MYSQL_HOST=database
       - MYSQL_PORT=3306
       # - plugins.security.disabled=true
       # - discovery.type=single-node
