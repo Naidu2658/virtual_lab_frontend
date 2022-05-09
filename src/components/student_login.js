@@ -34,7 +34,7 @@ class StudentLoginPage extends Component {
 
       
       
-      axios.post('http://0.0.0.0:9090/studentlogin', this.state, { headers })
+      axios.post('http://localhost:9090/studentlogin', this.state, { headers })
       .then(response => 
         {
           if(response.status!=200){

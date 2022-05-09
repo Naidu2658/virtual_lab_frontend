@@ -30,7 +30,7 @@ class StudentCourseRegistrationPage  extends Component{
   
         
         
-        axios.post('http://0.0.0.0:9090/studentcourseregistration', this.state, { headers })
+        axios.post('http://localhost:9090/studentcourseregistration', this.state, { headers })
         .then(response => 
           {
               console.log(response);
