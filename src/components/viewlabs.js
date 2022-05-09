@@ -43,7 +43,7 @@ class ViewLabsPage  extends Component{
                 alert("viewing labs");
             }
             else{
-                alert("not viewing labs");
+                alert("not viewing  sdf labs");
             }
            }
         );
