@@ -25,7 +25,7 @@ class ViewCoursesPage extends Component{
       componentDidMount(){
         console.log("Did Mount")
         
-          axios.get('http://localhost:9090/viewcourses/'+this.props.match.params.student_mail)
+          axios.get('http://0.0.0.0:9090/viewcourses/'+this.props.match.params.student_mail)
           .then(response => 
             {
               if(response.status===200){

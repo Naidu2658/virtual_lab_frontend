@@ -44,7 +44,7 @@ class CreateLabsPage  extends Component{
    
 
         
-        axios.post('http://localhost:9090/createlab', formData, { headers })
+        axios.post('http://0.0.0.0:9090/createlab', formData, { headers })
          .then(response => 
            {
 
