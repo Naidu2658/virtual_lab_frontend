@@ -32,7 +32,7 @@ class FacultyRegistrationPage extends Component{
     
         
         
-        axios.post('http://172.16.134.190:9090/registerfaculty', this.state, { headers })
+        axios.post('http://localhost:9090/registerfaculty', this.state, { headers })
          .then(response => 
            {
 

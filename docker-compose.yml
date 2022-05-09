@@ -22,13 +22,13 @@ services:
     environment:
       - MYSQL_HOST=mydb
       - MYSQL_PORT=3306
-      - plugins.security.disabled=true
-      - discovery.type=single-node
-      - http.port=9200
-      - http.cors.enabled=true
-      - http.cors.allow-origin=http://localhost:3000,http://171.16.134.8:3000
-      - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Access-Control-Allow-Origin,Access-Control-Allow-Methods,Content-Type,Content-Length,Authorization
-      - http.cors.allow-credentials=true
+      # - plugins.security.disabled=true
+      # - discovery.type=single-node
+      # - http.port=9200
+      # - http.cors.enabled=true
+      # - http.cors.allow-origin=http://localhost:3000,http://171.16.134.8:3000
+      # - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Access-Control-Allow-Origin,Access-Control-Allow-Methods,Content-Type,Content-Length,Authorization
+      # - http.cors.allow-credentials=true
     depends_on:
       - mydb
     
