@@ -38,7 +38,7 @@ class FacultyLoginPage extends Component {
       .then(response => 
         {
           if(response.status!=200){
-            alert("Invalid CredentialsPlease Enter correct credentials");
+            alert("Invalid CredentialsPlease Enter the correct credentials");
           }
           else{
             this.setState({isLoggedIn : true});
