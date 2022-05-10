@@ -4,17 +4,17 @@ services:
   #   build: 
   #     context: .
   #   volumes:
-  #     - .:/spe_main_project_frontend
+  #     - .:/spe_main_project_frontend 
     
   frontend:
-    image: naidu2658/virtual_lab_frontend
+    image: naidu2658/virtual_lab_frontend:latest
     ports:
       - 3000:3000
     container_name: frontend_container1
     command: npm start
 
   backend:
-    image: naidu2658/virtual_lab_backend
+    image: naidu2658/virtual_lab_backend:latest
     ports:
       - "9090:9090"
     container_name: backend_container_sql1
