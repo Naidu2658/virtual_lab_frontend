@@ -26,13 +26,13 @@ class StudentRegistrationPage extends Component{
        // const token = this.getCookie('doctor_cookie');
        const headers = { 
         "Content-Type": "application/json" ,
-        "Access-Control-Allow-Origin": "http://localhost:9090",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
     };
     
         
         
-        axios.post('http://172.16.134.190:9090/studentregistration', this.state, { headers })
+        axios.post('http://localhost:9091/studentregistration', this.state, { headers })
          .then(response => 
            {
 

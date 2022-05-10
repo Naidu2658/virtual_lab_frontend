@@ -28,13 +28,13 @@ class ViewLabsPage  extends Component{
        // const token = this.getCookie('doctor_cookie');
        const headers = { 
         "Content-Type": "application/json" ,
-        "Access-Control-Allow-Origin": "http://localhost:9090",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
     };
     
         
         
-        axios.get('http://172.16.134.190:9090/viewlab/'+this.state.course_name+'/'+this.state.faculty_mail, { headers })
+        axios.get('http://localhost:9091/viewlab/'+this.state.course_name+'/'+this.state.faculty_mail, { headers })
          .then(response => 
            {
                console.log(response.data);

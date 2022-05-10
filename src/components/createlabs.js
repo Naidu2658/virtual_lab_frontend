@@ -38,13 +38,13 @@ class CreateLabsPage  extends Component{
        // const token = this.getCookie('doctor_cookie');
        const headers = { 
         "Content-Type": "multipart/form-data" ,
-        "Access-Control-Allow-Origin": "http://localhost:9090",
+         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
     };
    
 
         
-        axios.post('http://172.16.134.190:9090/createlab', formData, { headers })
+        axios.post('http://localhost:9091/createlab', formData, { headers })
          .then(response => 
            {
 
