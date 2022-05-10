@@ -34,7 +34,7 @@ class ViewLabsPage  extends Component{
     
         
         
-        axios.get('http://localhost:9090/viewlab/'+this.state.course_name+'/'+this.state.faculty_mail, { headers })
+        axios.get('http://172.16.134.190:9090/viewlab/'+this.state.course_name+'/'+this.state.faculty_mail, { headers })
          .then(response => 
            {
                console.log(response.data);
