@@ -5,42 +5,41 @@ services:
   #     context: .
   #   volumes:
   #     - .:/spe_main_project_frontend
-
-  database:
-    image: mysql:latest
-    ports:
-      - "3306:3306"
-    container_name: database
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=virtuallab
-      - MYSQL_USER=naidu
-      - MYSQL_PASSWORD=password
-
+    
   frontend:
     image: naidu2658/virtual_lab_frontend
     ports:
       - 3000:3000
-    container_name: frontend
+    container_name: frontend_container1
     command: npm start
-    links:
-      - backend
 
   backend:
     image: naidu2658/virtual_lab_backend
     ports:
       - "9090:9090"
-    container_name: backend
+    container_name: backend_container_sql1
     restart: on-failure
     environment:
-      - MYSQL_HOST=database
+      - MYSQL_HOST=mydb
       - MYSQL_PORT=3306
       # - plugins.security.disabled=true
       # - discovery.type=single-node
-      # - http.port=9200
+      # - http.port=9090
       # - http.cors.enabled=true
-      # - http.cors.allow-origin=http://localhost:3000,http://171.16.134.8:3000
+      # - http.cors.allow-origin=http://localhost:3000,http://171.16.134.190:3000
       # - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Access-Control-Allow-Origin,Access-Control-Allow-Methods,Content-Type,Content-Length,Authorization
       # - http.cors.allow-credentials=true
-    links:
-      - database
+    depends_on:
+      - mydb
+    
+
+  mydb:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    container_name: database_container
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=virtuallab
+      - MYSQL_USER=naidu
+      - MYSQL_PASSWORD=password

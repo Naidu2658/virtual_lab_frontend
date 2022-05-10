@@ -28,7 +28,7 @@ class FacultyLoginPage extends Component {
       event.preventDefault();
       const headers = { 
           "Content-Type": "application/json" ,
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "http://localhost:9090",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
       };
 
