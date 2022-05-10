@@ -1,7 +1,7 @@
 ---
 
 - name: run containers
-  hosts: all
+  hosts: local
   become: true
 
   tasks:
