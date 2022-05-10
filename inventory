@@ -1,3 +1,2 @@
-[local]
+[docker]
 172.18.0.1 ansible_user=naidu
-host_key_checking = False

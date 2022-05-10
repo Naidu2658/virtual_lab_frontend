@@ -1,6 +1,6 @@
 ---
 - name: run containers
-  hosts: local
+  hosts: docker
   become: true
 
   tasks:
