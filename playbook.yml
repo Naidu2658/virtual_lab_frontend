@@ -1,6 +1,6 @@
 ---
 - name: run containers
-  hosts: docker
+  hosts: all
   become: true
 
   tasks:
@@ -15,6 +15,6 @@
 #      docker_compose:
 #        project_src: .
 #        state: present
-    - name: shell docker
+    - name: shell docker 
       shell:
         cmd: docker-compose up
